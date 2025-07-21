@@ -1,17 +1,17 @@
 cask "mdviewer" do
-  version "0.5.61"
-  sha256 "35e78fae2872c0a360b62fec83c73aa6bfa97d25092da398df985ebc73cdf603"
-
-  url "https://github.com/buckmoon/mdviewer-release/releases/download/v#{version}/mdViewer-#{version}-arm64.dmg",
-      verified: "github.com/buckmoon/mdviewer-release/"
+  version "0.5.72"
+  sha256 "e7067539fc769e9f980a4c2e76b6a923f3aa0a742ba59b8607a013ab7734cad1"
+  
+  url "https://github.com/buckmoon/mdviewer-release/releases/download/v#{version}/mdViewer-#{version}-arm64.dmg"
   name "MDViewer"
-  desc "Markdown document viewer"
-  homepage "https://buckmoon.co.jp/mdviewer/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
+  desc "Fast and lightweight Markdown viewer with live preview"
+  homepage "https://github.com/buckmoon/mdviewer"
+  
   app "mdViewer.app"
+  
+  zap trash: [
+    "~/Library/Application Support/mdViewer",
+    "~/Library/Preferences/jp.co.buckmoon.mdviewer.plist",
+    "~/Library/Caches/mdviewer"
+  ]
 end
