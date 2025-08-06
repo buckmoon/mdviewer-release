@@ -1,6 +1,6 @@
 cask "mdviewer" do
-  version "0.6.18"
-  sha256 "81081827b5bf024a7a45912a9abc66266ebd9c383b67cbcc0ed83571f104bf11"
+  version "0.6.19"
+  sha256 "05ac55b475ebef93e68b270cc6865d8221eca83c05bead662a54fcd62add30a6"
   
   url "https://github.com/buckmoon/mdviewer-release/releases/download/v#{version}/mdViewer-#{version}-arm64.dmg"
   name "MDViewer"
